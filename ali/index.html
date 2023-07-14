@@ -235,7 +235,7 @@
                     .map(function (m) {
                         choosed[getKey(m)] = 1;
                         list[m.index].style.color = color;
-                        return m.name + '<br/>' + m.uid;
+                        return m.uid;
                     });
                 localStorage.setItem('choosed', JSON.stringify(choosed));
                 return ret;
@@ -248,9 +248,9 @@
             new Vue({
                 el: '#tools',
                 data: {
-                    selected: 3,
+                    selected: 1,
                     running: false,
-                    btns: []
+                    btns: [1,5]
                 },
                 mounted() {
                     canvas.innerHTML = createHTML();
